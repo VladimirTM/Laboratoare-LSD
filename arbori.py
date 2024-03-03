@@ -100,6 +100,8 @@ def p5(arbore, functie):
             return functie(arbore[value])
         else:
             return functie(arbore[value]) or p5(arbore[left], functie) or p5(arbore[right], functie)
+    else:
+        return False
 
 
 # print(p5(arbore_binar, lambda x: x % 2 == 0))
@@ -111,6 +113,8 @@ def p6(arbore, functie):
             return functie(arbore[value])
         else:
             return functie(arbore[value]) and p6(arbore[left], functie) and p6(arbore[right], functie)
+    else:
+        return True
 
 
 # print(p6(arbore_binar, lambda x: x % 2 == 0))
